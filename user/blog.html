@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
     <link
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="blog.css">
   </head>
   <body>
     <!--Navbar-->
@@ -42,7 +41,7 @@
               ><span class="text-primary"><u>Blog</u></span></a
             >
             <a class="nav-item nav-link" href="index.html#about">About</a>
-            <a class="nav-item nav-link" href="contactme.html">Contact</a>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
           </div>
         </div>
       </nav>
@@ -75,17 +74,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 my-2">
-          <div class="card" style="width: 100%">
-            <img
-              src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Titulo</h5>
+          <a href="post.html">
+            <div class="card" style="width: 100%">
+              <img
+                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titulo</h5>
+              </div>
             </div>
-          </div>
-          <br />
+          </a>
+          <br/>
 
           <div class="card" style="width: 100%">
             <img
@@ -197,6 +198,6 @@
     </footer>
 
     <!-- Antes de cerrar el body de tu HTML -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
