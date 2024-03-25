@@ -1,3 +1,4 @@
+/*Timeline*/
 /* The actual timeline (the vertical ruler) */
 .main-timeline-2 {
   position: relative;
@@ -130,6 +131,7 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
+/*Quitar estilo links*/
 a {
   /* Restablecer todas las propiedades a su valor predeterminado */
   color: inherit; /* o el color que desees */
