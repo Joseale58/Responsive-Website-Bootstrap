@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar With Bootstrap</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">JR</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-protection"></i>
+                        <span>Publicaciones</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Blog</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Proyectos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Acerca de mí</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Contáctame</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Cuenta</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main p-3">
+            <div class="text-center">
+                <h1>Publicaciones</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="text-center mt-2"><h1>Editar Publicaciones</h1></div>
+                    
+                    <div class="col-2"></div>
+                    <div class="col-8 py-3 pt-5 ps-5">
+                        <!--Formulario para editar-->
+                        <form>
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleFormControlInput1"
+                              value="Titulo"
+                            />
+                          </div>
+                          <br />
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Categorías</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <br />
+                          <div class="form-group">
+                            <textarea
+                              class="form-control"
+                              id="exampleFormControlTextarea1"
+                              rows="3"
+                              placeholder="Summary"
+                            ></textarea>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="defaultCheck1"
+                            />
+                            <label class="form-check-label" for="defaultCheck1">
+                              Auto Resumen
+                            </label>
+                          </div>
+                          <br />
+                          <div class="form-group">
+                            <textarea
+                              class="editor"
+                              rows="15"
+                              placeholder="Cuerpo"
+                            ></textarea>
+                          </div>
+                          <br />
+                          <div class="row">
+                            <div class="col-6">
+                              <button type="submit" class="btn btn-primary form-control">
+                                Guardar
+                              </button>
+                            </div>
+                            <div class="col-6">
+                              <button type="submit" class="btn btn-danger form-control">
+                                Eliminar
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

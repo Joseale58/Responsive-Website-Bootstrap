@@ -1,219 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar With Bootstrap</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <!--Sidebar-->
+    <link rel="stylesheet" href="styles_sidemenu.css">
+</head>
 
-    <div class="container-fluid">
-      <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-          <div
-            class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
-          >
-            <a
-              href="/"
-              class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-            >
-              <span class="fs-5 d-none d-sm-inline">Menú</span>
-            </a>
-            <ul
-              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-              id="menu"
-            >
-              <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house">1</i>
-                  <span class="ms-1 d-none d-sm-inline">Publicaciones</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house">2</i>
-                  <span class="ms-1 d-none d-sm-inline">Proyectos</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house">3</i>
-                  <span class="ms-1 d-none d-sm-inline">Acerca de mí</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house">4</i>
-                  <span class="ms-1 d-none d-sm-inline">Contactame</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house">5</i>
-                  <span class="ms-1 d-none d-sm-inline">Cuenta</span>
-                </a>
-              </li>
-            </ul>
-            <hr />
-            <div class="dropdown pb-4">
-              <a
-                href="#"
-                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                id="dropdownUser1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="https://github.com/mdo.png"
-                  alt="hugenerd"
-                  width="30"
-                  height="30"
-                  class="rounded-circle"
-                />
-                <span class="d-none d-sm-inline mx-1">Usuario</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                  <hr class="dropdown-divider" />
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">JR</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-protection"></i>
+                        <span>Publicaciones</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Blog</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Proyectos</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Acerca de mí</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Contáctame</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Cuenta</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Cerrar sesión</span>
+                </a>
             </div>
-          </div>
-        </div>
-        <div class="col py-3  ps-5">
-            <div class="row">
-                <h1 class="mb-5">Proyectos</h1>
-                <div class="col-4">
-                    <a href="post.html">
-                        <div class="card" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Crear Nuevo</h5>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="post.html" >
-                        <div class="card mt-2" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="post.html">
-                        <div class="card mt-2" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
-                </div>
-                <div class="col-4">
-                    <a href="post.html">
-                        <div class="card" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="post.html" >
-                        <div class="card mt-2" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="post.html">
-                        <div class="card mt-2" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
-
-                </div>
-                <div class="col-4">
-                    <a href="post.html">
-                        <div class="card" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="post.html" >
-                        <div class="card mt-2" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="post.html">
-                        <div class="card mt-2" style="width: 80%">
-                          <img
-                            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                          </div>
-                        </div>
-                      </a>
+        </aside>
+        <div class="main p-3">
+            <div class="text-center">
+                <h1>Proyectos</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="post.html">
+                            <div class="card mt-2 mx-auto" style="width: 80%">
+                              <img
+                                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Crear Nueva Publicación</h5>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="post.html" >
+                            <div class="card mt-2 mx-auto" style="width: 80%">
+                              <img
+                                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Titulo</h5>
+                              </div>
+                            </div>
+                          </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="post.html">
+                            <div class="card mt-2 mx-auto" style="width: 80%">
+                              <img
+                                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Titulo</h5>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="post.html" >
+                            <div class="card mt-2 mx-auto" style="width: 80%">
+                              <img
+                                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Titulo</h5>
+                              </div>
+                            </div>
+                          </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="post.html">
+                            <div class="card mt-2 mx-auto" style="width: 80%">
+                              <img
+                                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Titulo</h5>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="post.html" >
+                            <div class="card mt-2 mx-auto" style="width: 80%">
+                              <img
+                                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Titulo</h5>
+                              </div>
+                            </div>
+                          </a>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
     </div>
-
-    <!-- Antes de cerrar el body de tu HTML -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <script src="script_sidemenu.js"></script>
+</body>
+
 </html>
