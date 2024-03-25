@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar With Bootstrap</title>
+    <link
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles_sidemenu.css" />
+    
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button class="toggle-btn" type="button">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="sidebar-logo">
+            <a href="admin_dashboard.html">JR</a>
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link collapsed has-dropdown"
+              data-bs-toggle="collapse"
+              data-bs-target="#auth"
+              aria-expanded="false"
+              aria-controls="auth"
+            >
+              <i class="bi bi-sticky"></i>
+              <span>Publicaciones</span>
+            </a>
+            <ul
+              id="auth"
+              class="sidebar-dropdown list-unstyled collapse"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="posts.html" class="sidebar-link">Blog</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="projects.html" class="sidebar-link">Proyectos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a href="about.html" class="sidebar-link">
+              <i class="bi bi-info-circle"></i>
+              <span>Acerca de mí</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="contact.html" class="sidebar-link">
+              <i class="bi bi-envelope-at-fill"></i>
+              <span>Contáctame</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="profile.html" class="sidebar-link">
+              <i class="bi bi-person-circle"></i>
+              <span>Cuenta</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-box-arrow-left"></i>
+            <span>Cerrar sesión</span>
+          </a>
+        </div>
+      </aside>
+      <div class="main p-3">
+        <div class="text-center">
+            <h1>Bandeja de entrada</h1>
+        </div>
+        <div class="container mt-5">
+          <div class="row ">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-secondary">
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>mark@email.com</td>
+                        <td>Leído</td>
+                      </tr>
+                        <tr class="table-row" data-href="contact_card.html">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>jacob@email.com</td>
+                        <td>No leído</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script_sidemenu.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const rows = document.querySelectorAll(".table-row");
+        rows.forEach(row => {
+          row.addEventListener("click", function() {
+            window.location.href = this.dataset.href;
+          });
+        });
+      });
+      </script>
+  </body>
+</html>

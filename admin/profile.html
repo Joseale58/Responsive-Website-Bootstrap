@@ -1,91 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sidebar With Bootstrap</title>
-    <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles_sidemenu.css">
-</head>
+    <link rel="stylesheet" href="styles_sidemenu.css" />
+    <style>
+      .img-container {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Ancho fijo para el contenedor principal */
+    height: 100px; /* Altura fija para el contenedor principal */
+    overflow: hidden; /* Asegura que la imagen no sobresalga del contenedor */
+    border-radius: 50%; /* Para que el contenedor principal sea circular */
+}
 
-<body>
+.img-container img {
+    width: auto; /* Para mantener la proporción de la imagen */
+    height: 100%; /* Para ajustarse a la altura del contenedor */
+    max-width: none; /* Para desactivar la limitación del ancho máximo */
+    object-fit: cover; /* Escalar la imagen para llenar el contenedor manteniendo la proporción */
+    object-position: center; /* Centra la imagen en el contenedor */
+    border-radius: 50%; /* Para que la imagen sea circular dentro del contenedor */
+}
+
+
+      .icono-sobre-imagen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 35px; /* Ajusta el tamaño del ícono según tu necesidad */
+        color: white; /* Cambia el color del ícono según tu necesidad */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al ícono para mejorar la visibilidad */
+        cursor: pointer; /* Cambia el cursor al pasar por encima del ícono */
+      }
+
+      /* Oculta el elemento input[type=file] */
+      input[type="file"] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="wrapper">
-        <aside id="sidebar">
-            <div class="d-flex">
-                <button class="toggle-btn" type="button">
-                    <i class="bi bi-list"></i>
-                </button>
-                <div class="sidebar-logo">
-                    <a href="admin_dashboard.html">JR</a>
-                </div>
-            </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                        <i class="bi bi-sticky"></i>
-                        <span>Publicaciones</span>
-                    </a>
-                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="posts.html" class="sidebar-link">Blog</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="projects.html" class="sidebar-link">Proyectos</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="about.html" class="sidebar-link">
-                        <i class="bi bi-info-circle"></i>
-                        <span>Acerca de mí</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="contact.html" class="sidebar-link">
-                        <i class="bi bi-envelope-at-fill"></i>
-                        <span>Contáctame</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="profile.html" class="sidebar-link">
-                        <i class="bi bi-person-circle"></i>
-                        <span>Cuenta</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
-                    <i class="bi bi-box-arrow-left"></i>
-                    <span>Cerrar sesión</span>
-                </a>
-            </div>
-        </aside>
-        <div class="main p-3">
-            <h1>Contenido</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 bg-primary">
-                        <h1>Hola</h1>
-                    </div>
-                    <div class="col-md-4 bg-warning">
-                        <h1>Hola</h1>
-                    </div>
-                    <div class="col-md-4 bg-danger">
-                        <h1>Hola</h1>
-                    </div>
-                </div>
-            </div>
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button class="toggle-btn" type="button">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="sidebar-logo">
+            <a href="admin_dashboard.html">JR</a>
+          </div>
         </div>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link collapsed has-dropdown"
+              data-bs-toggle="collapse"
+              data-bs-target="#auth"
+              aria-expanded="false"
+              aria-controls="auth"
+            >
+              <i class="bi bi-sticky"></i>
+              <span>Publicaciones</span>
+            </a>
+            <ul
+              id="auth"
+              class="sidebar-dropdown list-unstyled collapse"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="posts.html" class="sidebar-link">Blog</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="projects.html" class="sidebar-link">Proyectos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a href="about.html" class="sidebar-link">
+              <i class="bi bi-info-circle"></i>
+              <span>Acerca de mí</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="contact.html" class="sidebar-link">
+              <i class="bi bi-envelope-at-fill"></i>
+              <span>Contáctame</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="profile.html" class="sidebar-link">
+              <i class="bi bi-person-circle"></i>
+              <span>Cuenta</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-box-arrow-left"></i>
+            <span>Cerrar sesión</span>
+          </a>
+        </div>
+      </aside>
+      <div class="main p-3">
+        <div class="container mt-5">
+          <div class="row ">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <form>
+                <div class="container text-center">
+                  <div class="img-container">
+                    <img src="../imgs/profile.png" class="w-50" alt="" />
+                    <!-- Agrega el botón para seleccionar archivos -->
+                    <label
+                      for="file-input"
+                      class="bi bi-camera icono-sobre-imagen"
+                    ></label>
+                    <input id="file-input" type="file" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="NombreUsuario">Usuario:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    value="Joseale58"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Contrasena">Contraseña:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    value="123456"
+                  />
+                  <div class="form-group">
+                    <label for="ConfirmacionContrasena"
+                      >Confirmar contraseña:</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      value="123456"
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="row px-2" >
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script_sidemenu.js"></script>
-</body>
-
+  </body>
 </html>
